@@ -1,0 +1,280 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+
+/*********************
+/		  Config
+/*********************/
+:root {
+	--accent: #59fdf5;
+	--dark: rgb(47, 57, 79);
+	--darker: #20222a;
+	--darkest: #101319;
+	--light: #858991;
+	--lightest: #f9f9f9;
+	--medium: #2b2e33;
+	--body-font: 'Roboto', 'Helvetica', sans-serif;
+	--title-font: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+::selection {
+	background: var(--accent);
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 85%;
+}
+
+.btn {
+	background-color: transparent;
+	border-radius: 3px;
+	font-family: var(--title-font);
+	font-size: 0.8rem;
+	height: 45px;
+	letter-spacing: 0.2rem;
+	padding: 10px 20px;
+	position: relative;
+	text-transform: uppercase;
+	transition: color 0.3s ease-out;
+	z-index: 0;
+}
+
+.btn::after {
+	content: "";
+	height: 0;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: all 0.3s ease-out;
+	width: 100%;
+	z-index: -1;
+}
+
+.btn-hover::after {
+	height: 100%;
+	top: 0;
+}
+
+.btn-accent {
+	border: 1px solid var(--accent);
+	color: white;
+}
+
+.btn-accent:hover {
+	color: var(--darkest);
+}
+
+.btn-accent::after {
+	background-color: var(--accent);
+}
+
+.btn-dark {
+	border: 1px solid var(--darkest);
+	color: var(--darkest);
+}
+
+.btn-dark:hover {
+	color: var(--lightest);
+}
+
+.btn-dark::after {
+	background-color: var(--darkest);
+}
+
+
+
+/*********************
+/			 Nav
+/*********************/
+.nav {
+	background-color: transparent;
+	padding: 25px 30px;
+	position: fixed;
+	width: 100vw;
+	z-index: 5;
+}
+
+.burger {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 17px;
+	justify-content: space-between;
+	width: 18px;
+}
+
+.burger-line {
+	border-radius: 3px;
+	height: 3px;
+	width: 100%;
+}
+
+.main-nav .burger-line {
+	background-color: var(--accent);
+}
+
+.dark-nav .burger-line {
+	background-color: black;
+}
+
+
+/*********************
+/			Modal
+/*********************/
+.modal {
+	background-color: var(--accent);
+	color: black;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -2;
+}
+
+.modal .wrapper {
+	height: 100vh;
+	position: relative;
+}
+
+.modal-show {
+	opacity: 1;
+	z-index: 4;
+}
+
+.modal-list {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+	position: relative;
+	transform: translateY(-50%);
+	top: 50vh;
+}
+
+.modal-item a {
+	color: black;
+	display: inline-block;
+	font-family: var(--body-font);
+	font-size: 2.5rem;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.modal-item a::before {
+	background-color: black;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: width 0.3s ease-out, height 0.2s linear;
+	width: 0%;
+}
+
+.modal-item a:hover::before {
+	height: 4px;
+	width: 100%;
+}
+
+.modal-copyright {
+	bottom: 0;
+	padding-bottom: 50px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.copyright-title {
+	font-family: var(--title-font);
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.copyright-sub {
+	font-family: var(--body-font);
+	font-size: 0.8rem;
+	font-weight: 300;
+	letter-spacing: 0.03rem;
+	margin-top: 13px;
+	position: relative;
+}
+
+.copyright-sub::after {
+	background-color: black;
+	content: "";
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	bottom: -19px;
+	transform: translateX(-50%);
+	width: 40px;
+}
+
+/*********************
+/			Home
+/*********************/
+.home {
+	background: url(https://images.unsplash.com/photo-1544090372-c1fe7f8dee5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	overflow: hidden;
+	width: 100vw;
+}
+
+.home::after {
+	background-color: var(--darkest);
+	content: "";
+	height: 100vh;
+	left: 0;
+	opacity: 0.75;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+.home-container {
+	margin: 0 auto;
+	max-width: 450px;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 80%;
+	z-index: 3;
+}
+
+.home-heading {
+	color: var(--accent);
+	font-family: var(--title-font);
+	font-size: 10rem;
+	font-weight: 800;
+	letter-spacing: -0.3rem;
+	text-transform: uppercase;
+}
+
+.home-sub {
+	color: white;
+	font-family: var(--title-font);
+	font-weight: 300;
+	line-height: 1.7;
+	margin: 10px 0 50px;
+}
