@@ -1,0 +1,90 @@
+/*********************
+/		  Contact
+/*********************/
+#contact-us {
+	background-color: var(--darkest);
+	padding: 120px 0;
+	text-align: center;
+}
+
+.contact-sub-heading {
+	color: white;
+	font-family: var(--body-font);
+	font-size: 2.5rem;
+	font-weight: 800;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.contact-sub-heading::after {
+	background-color: var(--accent);
+	bottom: -20px;
+	content: "";
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 50px;
+}
+
+.contact-p {
+	color: var(--lightest);
+	font-family: var(--title-font);
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.7;
+	margin: 41px 0 40px;		/* 20px distance between about-sub-heading line and sub-heading, another 20px distance between about-sub-heading line and about-p, and 1px for height of the line */
+	opacity: 0.9;
+}
+
+
+/*********************
+/	  Contact Form
+/*********************/
+#contact-form {
+	background-color: var(--darkest);
+	border-bottom: 1px solid var(--darker);
+	padding: 40px 0 120px;
+	text-align: center;
+}
+
+form {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.form-heading {
+	color: white;
+	font-family: var(--body-font);
+	font-size: 0.8rem;
+	font-weight: 500;
+	letter-spacing: 0.15rem;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+input {
+	background-color: transparent;
+	border: 1px solid var(--light);
+	color: var(--lightest);
+	font-family: var(--body-font);
+	font-weight: 300;
+	height: 45px;
+	letter-spacing: 0.1rem;
+	margin-right: 10px;
+	outline-color: var(--accent);
+	padding: 15px 20px;
+}
+
+input[type=text] {
+	width: 25%;
+}
+
+input[type=email] {
+	width: 35%;
+}
+
+form button {
+	cursor: pointer;
+}

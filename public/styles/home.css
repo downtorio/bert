@@ -1,0 +1,46 @@
+/*********************
+/			Home
+/*********************/
+.home {
+	background: url(https://images.unsplash.com/photo-1544090372-c1fe7f8dee5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	overflow: hidden;
+	width: 100vw;
+}
+
+.home::after {
+	background-color: var(--darkest);
+	content: "";
+	height: 100vh;
+	left: 0;
+	opacity: 0.75;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+.home-container {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 3;
+}
+
+.home-heading {
+	color: var(--accent);
+	font-family: var(--title-font);
+	font-size: 10rem;
+	font-weight: 800;
+	letter-spacing: -0.3rem;
+	text-transform: uppercase;
+}
+
+.home-sub {
+	color: white;
+	font-family: var(--title-font);
+	font-weight: 300;
+	line-height: 1.7;
+	margin: 10px 0 50px;
+}

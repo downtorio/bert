@@ -1,0 +1,107 @@
+/*********************
+/		  Footer
+/*********************/
+footer {
+	background-color: var(--darkest);
+	padding: 70px 0;
+}
+
+footer .footer-top {
+	display: flex;
+}
+
+.footer-each {
+	width: 25%;
+}
+
+.footer-heading {
+	color: white;
+	font-family: var(--body-font);
+	font-size: 0.8rem;
+	font-weight: 500;
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+}
+
+.footer-sub {
+	color: var(--lightest);
+	font-family: var(--body-font);
+	font-size: 0.65rem;
+	font-weight: 300;
+	letter-spacing: 0.04rem;
+	line-height: 1.7;
+	margin-top: 10px;
+	opacity: 0.9;
+}
+
+.footer-socials {
+	display: flex;
+	list-style: none;
+	margin-left: -10px;
+		/* counteract .social-icon i's padding */
+	padding: 15px 0;
+}
+
+.social-icon {
+	background-color: transparent;
+	border-radius: 50%;
+	height: 28px;
+	margin-right: 7px;
+	transition: all 0.2s ease-out;
+	width: 28px;
+}
+
+.social-icon i {
+	color: var(--lightest);
+	font-size: 0.8rem;
+	left: 50%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-65%) translateX(-50%);
+}
+
+.social-icon.insta:hover {
+	/* fancy shmancy instagram background color: */
+	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.social-icon.facebook:hover {
+	background-color: #3b5998;
+}
+
+.social-icon.linkedin:hover {
+	background-color: #0077B5;
+}
+
+.social-icon.twitter:hover {
+	background-color: #38A1F3;
+}
+
+.footer-bottom {
+	color: var(--lightest);
+	margin-top: 100px;
+	text-align: center;
+}
+
+.footer-copy {
+	font-family: var(--title-font);
+	font-size: 0.75rem;
+	font-weight: 300;
+	opacity: 0.9rem;
+	position: relative;
+}
+
+.footer-copy::before {
+	background-color: var(--accent);
+	content: "";
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	top: -30px;
+	transform: translateX(-50%);
+	width: 30px;
+}

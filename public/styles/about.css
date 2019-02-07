@@ -1,0 +1,305 @@
+/*********************
+/			About
+/*********************/
+#about,
+#contact {
+	background: url(https://images.unsplash.com/photo-1527195694714-9b939fac3432?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	min-height: 500px;
+	width: 100vw;
+}
+
+#about::after,
+#contact::after {
+	background-color: var(--accent);
+	content: "";
+	height: 100vh;
+	left: 0;
+	min-height: 500px;
+	opacity: 0.85;
+	position: absolute;
+	top: 0;
+	width: 100vw;	
+}
+
+.about-container,
+.contact-container {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 3;
+}
+
+.about-heading,
+.contact-heading {
+	color: black;
+	font-family: var(--title-font);
+	font-size: 10rem;
+	font-weight: 800;
+	letter-spacing: -0.3rem;
+	text-transform: uppercase;
+}
+
+.about-sub,
+.contact-sub {
+	color: black;
+	font-family: var(--title-font);
+	font-weight: 300;
+	line-height: 1.7;
+	margin: 10px 0 50px;
+}
+
+
+/*********************
+/		  Story
+/*********************/
+.about-story-service-style {
+	background-color: var(--lightest);
+	padding: 100px 0;
+	text-align: center;
+}
+
+.about-sub-heading {
+	font-family: var(--body-font);
+	font-size: 2.5rem;
+	font-weight: 800;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.about-sub-heading::after {
+	background-color: black;
+	bottom: -20px;
+	content: "";
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 50px;
+}
+
+.about-p {
+	color: black;
+	font-family: var(--title-font);
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.7;
+	margin-top: 41px;		/* 20px distance between about-sub-heading line and sub-heading, another 20px distance between about-sub-heading line and about-p, and 1px for height of the line */
+}
+
+
+/*********************
+/			Play
+/*********************/
+
+#play {
+	background: url(https://images.unsplash.com/photo-1476553986076-d59060d397e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1578&q=80) no-repeat center center;
+	background-size: cover;
+	height: 500px;
+	position: relative;
+	width: 100vw;
+}
+
+#play::after {
+	background-color: var(--darkest);
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.4;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.play-container {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+
+.play-circle {
+	background-color: var(--accent);
+		/* keeping the background color transparent creates a tiny little dark gap between the border and the ::after element; the background color's purpose here is solely to fill in that gap */
+	border: 2px solid var(--accent);
+	border-radius: 50%;
+	cursor: pointer;
+	height: 50px;
+	margin: 0 auto 20px;
+	overflow: hidden;
+	position: relative;
+	transition: background-color 0.2s ease-out;
+	width: 50px;
+}
+
+.play-circle:hover {
+	background-color: transparent;
+}
+
+.play-circle::after {
+	background-color: var(--accent);
+	bottom: 0;
+	content: "";
+	height: 100%;
+	position: absolute;
+	transition: height 0.3s ease-out;
+	width: 100%;
+	z-index: 1;
+}
+
+.play-circle:hover::after {
+	height: 0;
+}
+
+
+.play-button {
+	background-color: black;
+	clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+	height: 12px;
+	left: 1px;			/* nudge it just a bit to the right */
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: background-color 0.3s ease-out;
+	width: 10px;
+	z-index: 2;
+}
+
+.play-circle:hover .play-button {
+	background-color: var(--accent);
+}
+
+.play-p {
+	color: white;
+	font-family: var(--title-font);
+	font-size: 0.9rem;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+/*********************
+/			Grid
+/*********************/
+#grid {
+	position: relative;
+}
+
+#grid .wrapper {
+	display: flex;
+	/* flex-wrap: wrap; */
+	height: auto;
+}
+
+.grid-each {
+	left: 0;
+	padding: 140px 0;
+	position: relative;
+	width: 50%;
+}
+
+#branding-container {
+	flex-shrink: 0;
+	padding-right: 50px;
+}
+
+.about-medium-heading {
+	font-family: var(--body-font);
+	font-size: 1.7rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.plants-img {
+	background: url(https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60) no-repeat center center;
+	background-size: cover;
+	flex-shrink: 0;
+	position: relative;
+	right: 0;
+	width: 50vw;
+}
+
+.flowers-img {
+	background: url(https://images.unsplash.com/photo-1517661961124-1ab6ac2e1e51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat center center;
+	background-size: cover;
+	flex-shrink: 0;
+	right: 50vw;
+	position: relative;
+	width: 50vw;
+}
+
+#webdesign-container {
+	flex-shrink: 0;
+	left: 50%;
+	padding-left: 50px;
+	position: relative;
+	width: 50%;
+}
+
+
+/**************************
+/	Animations & Marketing
+/**************************/
+#animations-marketing {
+	background-color: var(--lightest);
+}
+
+.animations-marketing .wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.am-each {
+	padding: 90px 0;
+	width: 50%;
+}
+
+.animations {
+	padding-right: 50px;
+}
+
+.marketing {
+	padding-left: 50px;
+}
+
+.about-small-heading {
+	font-family: var(--body-font);
+	font-size: 1.4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.animations-marketing .about-p {
+	margin-top: 25px;
+}
+
+
+/*********************
+/		Dual Images
+/*********************/
+#dual-imgs {
+	display: flex;
+	height: 380px;
+}
+
+.dual-img-each {
+	width: 50%;
+}
+
+.dual-img-left {
+	background: url(https://images.unsplash.com/photo-1542254340-92fcae7a1534?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60) no-repeat center center;
+	background-size: cover;
+	height: 100%;
+}
+
+.dual-img-right {
+	background: url(https://images.unsplash.com/photo-1541433017748-637fb83d2e4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60) no-repeat center center;
+	background-size: cover;
+	height: 100%;
+}
