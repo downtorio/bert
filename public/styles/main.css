@@ -8,7 +8,7 @@
 /*********************/
 :root {
 	--accent: #59fdf5;
-	--dark: rgb(47, 57, 79);
+	--dark: #2f394f;
 	--darker: #20222a;
 	--darkest: #101319;
 	--light: #858991;
@@ -70,7 +70,7 @@ a {
 	z-index: -1;
 }
 
-.btn-hover::after {
+.btn:hover::after {
 	height: 100%;
 	top: 0;
 }
@@ -306,7 +306,8 @@ a {
 /*********************
 /			About
 /*********************/
-#about {
+#about,
+#contact {
 	background: url(https://images.unsplash.com/photo-1527195694714-9b939fac3432?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
@@ -314,7 +315,8 @@ a {
 	width: 100vw;
 }
 
-#about::after {
+#about::after,
+#contact::after {
 	background-color: var(--accent);
 	content: "";
 	height: 100vh;
@@ -326,7 +328,8 @@ a {
 	width: 100vw;	
 }
 
-.about-container {
+.about-container,
+.contact-container {
 	position: relative;
 	text-align: center;
 	top: 50%;
@@ -334,7 +337,8 @@ a {
 	z-index: 3;
 }
 
-.about-heading {
+.about-heading,
+.contact-heading {
 	color: black;
 	font-family: var(--title-font);
 	font-size: 10rem;
@@ -343,7 +347,8 @@ a {
 	text-transform: uppercase;
 }
 
-.about-sub {
+.about-sub,
+.contact-sub {
 	color: black;
 	font-family: var(--title-font);
 	font-weight: 300;
@@ -353,7 +358,6 @@ a {
 
 
 /**** STORY ****/
-
 .about-story-service-style {
 	background-color: var(--lightest);
 	padding: 100px 0;
@@ -596,7 +600,99 @@ a {
 }
 
 
-/**** FOOTER ****/
+/*********************
+/		  Contact
+/*********************/
+#contact-us {
+	background-color: var(--darkest);
+	padding: 100px 0;
+	text-align: center;
+}
+
+.contact-sub-heading {
+	color: white;
+	font-family: var(--body-font);
+	font-size: 2.5rem;
+	font-weight: 800;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.contact-sub-heading::after {
+	background-color: var(--accent);
+	bottom: -20px;
+	content: "";
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 50px;
+}
+
+.contact-p {
+	color: var(--lightest);
+	font-family: var(--title-font);
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.7;
+	margin: 41px 0 40px;		/* 20px distance between about-sub-heading line and sub-heading, another 20px distance between about-sub-heading line and about-p, and 1px for height of the line */
+	opacity: 0.9;
+}
+
+
+/**** CONTACT FORM ****/
+#contact-form {
+	background-color: var(--darkest);
+	border-bottom: 1px solid var(--darker);
+	padding: 40px 0 100px;
+	text-align: center;
+}
+
+form {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.form-heading {
+	color: white;
+	font-family: var(--body-font);
+	font-size: 0.8rem;
+	font-weight: 500;
+	letter-spacing: 0.15rem;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+input {
+	background-color: transparent;
+	border: 1px solid var(--light);
+	color: var(--lightest);
+	font-family: var(--body-font);
+	font-weight: 300;
+	height: 45px;
+	letter-spacing: 0.1rem;
+	margin-right: 10px;
+	outline-color: var(--accent);
+	padding: 15px 20px;
+}
+
+input[type=text] {
+	width: 25%;
+}
+
+input[type=email] {
+	width: 35%;
+}
+
+form button {
+	cursor: pointer;
+}
+
+
+/*********************
+/		  Footer
+/*********************/
 footer {
 	background-color: var(--darkest);
 	padding: 70px 0;
