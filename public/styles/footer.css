@@ -8,10 +8,14 @@ footer {
 
 footer .footer-top {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .footer-each {
-	width: 25%;
+	margin-bottom: 50px;
+	padding-left: 0;
+	text-align: center;
+	width: 100%;
 }
 
 .footer-heading {
@@ -36,9 +40,9 @@ footer .footer-top {
 
 .footer-socials {
 	display: flex;
+	justify-content: center;
 	list-style: none;
-	margin-left: -10px;
-		/* counteract .social-icon i's padding */
+	margin-left: 0;
 	padding: 15px 0;
 }
 
@@ -51,13 +55,17 @@ footer .footer-top {
 	width: 28px;
 }
 
+.social-icon:last-of-type {
+	margin-right: 0;
+}
+
 .social-icon i {
 	color: var(--lightest);
 	font-size: 0.8rem;
-	left: 50%;
+	left: 0;
 	position: relative;
 	top: 50%;
-	transform: translateY(-65%) translateX(-50%);
+	transform: translateY(-65%);
 }
 
 .social-icon.insta:hover {
@@ -83,7 +91,7 @@ footer .footer-top {
 
 .footer-bottom {
 	color: var(--lightest);
-	margin-top: 100px;
+	margin-top: 40px;
 	text-align: center;
 }
 
@@ -104,4 +112,52 @@ footer .footer-top {
 	top: -30px;
 	transform: translateX(-50%);
 	width: 30px;
+}
+
+
+/*********************
+/			Media
+/*********************/
+@media (min-width: 445px) {
+	.footer-each {
+		text-align: left;
+		width: 50%;
+	}
+
+	.footer-socials {
+		justify-content: normal;
+		margin-left: -10px;
+			/* counteract .social-icon i's padding */
+	}
+
+	.social-icon i {
+		left: 50%;
+		transform: translateY(-65%) translateX(-50%);
+	}
+
+	.footer-bottom {
+		margin-top: 70px;
+	}
+}
+
+@media (min-width: 550px) {
+	.footer-each {
+		padding-left: 10%;
+	}
+
+	.footer-bottom {
+		margin-top: 100px;
+	}
+}
+
+@media (min-width: 1000px) {
+	footer .footer-top {
+		flex-wrap: nowrap;
+	}
+
+	.footer-each {
+		margin-bottom: 0;
+		padding-left: 0;
+		width: 25%;
+	}
 }

@@ -31,7 +31,7 @@
 .home-heading {
 	color: var(--accent);
 	font-family: var(--title-font);
-	font-size: 10rem;
+	font-size: 6rem;
 	font-weight: 800;
 	letter-spacing: -0.3rem;
 	text-transform: uppercase;
@@ -40,7 +40,36 @@
 .home-sub {
 	color: white;
 	font-family: var(--title-font);
+	font-size: 0.75rem;
 	font-weight: 300;
 	line-height: 1.7;
-	margin: 10px 0 50px;
+	margin: 20px auto 50px;
+	width: 80%;
+}
+
+
+/*********************
+/			Media
+/*********************/
+@media (min-width: 400px) {
+	.home-heading {
+		font-size: 8rem;
+	}
+
+	.home-sub {
+		font-size: 0.9rem;
+		margin: 10px 0 50px;
+		width: 95%
+	}
+}
+
+@media (min-width: 570px) {
+	.home-heading {
+		font-size: 10rem;
+	}
+
+	.home-sub {
+		font-size: 1rem;
+		width: 100%;
+	}
 }

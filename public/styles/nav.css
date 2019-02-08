@@ -33,6 +33,10 @@
 	background-color: var(--accent);
 }
 
+.home-nav .burger-line {
+	background-color: var(--accent);
+}
+
 .dark-nav .burger-line {
 	background-color: black;
 }
@@ -79,12 +83,17 @@
 }
 
 .modal-list {
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	padding: 0 50px;
 	position: relative;
+	text-align: center;
 	transform: translateY(-50%);
 	top: 50vh;
+}
+
+.modal-item {
+	padding: 40px 0;
 }
 
 .modal-item a {
@@ -148,4 +157,19 @@
 	bottom: -19px;
 	transform: translateX(-50%);
 	width: 40px;
+}
+
+
+/*********************
+/			Media
+/*********************/
+@media (min-width: 800px) {
+	.modal-list {
+		display: flex;
+		text-align: left;
+	}
+
+	.modal-item {
+		padding: 0;
+	}
 }

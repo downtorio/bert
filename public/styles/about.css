@@ -36,7 +36,7 @@
 .contact-heading {
 	color: black;
 	font-family: var(--title-font);
-	font-size: 10rem;
+	font-size: 4rem;
 	font-weight: 800;
 	letter-spacing: -0.3rem;
 	text-transform: uppercase;
@@ -46,9 +46,10 @@
 .contact-sub {
 	color: black;
 	font-family: var(--title-font);
+	font-size: 0.8rem;
 	font-weight: 300;
 	line-height: 1.7;
-	margin: 10px 0 50px;
+	margin: 18px 0 50px;
 }
 
 
@@ -93,7 +94,6 @@
 /*********************
 /			Play
 /*********************/
-
 #play {
 	background: url(https://images.unsplash.com/photo-1476553986076-d59060d397e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1578&q=80) no-repeat center center;
 	background-size: cover;
@@ -192,20 +192,21 @@
 
 #grid .wrapper {
 	display: flex;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 	height: auto;
 }
 
 .grid-each {
 	left: 0;
-	padding: 140px 0;
+	padding: 100px 0;
 	position: relative;
-	width: 50%;
+	width: 100%;
 }
 
 #branding-container {
 	flex-shrink: 0;
-	padding-right: 50px;
+	padding-left: 20px;
+	padding-right: 10px;
 }
 
 .about-medium-heading {
@@ -219,26 +220,30 @@
 	background: url(https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60) no-repeat center center;
 	background-size: cover;
 	flex-shrink: 0;
+	height: 300px;
+	left: -8vw;
 	position: relative;
-	right: 0;
-	width: 50vw;
+	right: auto;
+	width: 100vw;
 }
 
 .flowers-img {
 	background: url(https://images.unsplash.com/photo-1517661961124-1ab6ac2e1e51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat center center;
 	background-size: cover;
 	flex-shrink: 0;
-	right: 50vw;
+	height: 300px;
+	left: -8vw;
 	position: relative;
-	width: 50vw;
+	right: auto;
+	width: 100vw;
 }
 
 #webdesign-container {
 	flex-shrink: 0;
-	left: 50%;
-	padding-left: 50px;
-	position: relative;
-	width: 50%;
+	padding-left: 20px;
+	padding-right: 10px;
+	position: static;
+	width: 100%;
 }
 
 
@@ -256,16 +261,20 @@
 
 
 .am-each {
-	padding: 90px 0;
-	width: 50%;
+	padding: 30px 0;
+	width: 100%;
 }
 
 .animations {
-	padding-right: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 60px;
 }
 
 .marketing {
-	padding-left: 50px;
+	padding-bottom: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .about-small-heading {
@@ -284,17 +293,18 @@
 /		Dual Images
 /*********************/
 #dual-imgs {
-	display: flex;
-	height: 380px;
+	display: block;
+	height: 300px;
 }
 
 .dual-img-each {
-	width: 50%;
+	width: 100%;
 }
 
 .dual-img-left {
 	background: url(https://images.unsplash.com/photo-1542254340-92fcae7a1534?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60) no-repeat center center;
 	background-size: cover;
+	display: none;
 	height: 100%;
 }
 
@@ -302,4 +312,114 @@
 	background: url(https://images.unsplash.com/photo-1541433017748-637fb83d2e4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60) no-repeat center center;
 	background-size: cover;
 	height: 100%;
+}
+
+
+/*********************
+/			Media
+/*********************/
+@media (min-width: 400px) {
+	.about-heading,
+	.contact-heading {
+		font-size: 5.5rem;
+	}
+}
+
+@media (min-width: 560px) {
+	.about-heading,
+	.contact-heading {
+		font-size: 7.5rem;
+	}
+
+	.about-sub,
+	.contact-sub {
+		font-size: 0.9rem;
+	}
+
+	.am-each {
+		padding: 90px 0;
+		width: 50%;
+	}
+
+	.animations {
+		padding-left: 0;
+		padding-right: 30px;
+	}
+
+	.marketing {
+		padding-left: 30px;
+		padding-right: 0;
+	}
+}
+
+
+@media (min-width: 700px) {
+	.about-heading,
+	.contact-heading {
+		font-size: 10rem;
+	}
+
+	.about-sub,
+	.contact-sub {
+		font-size: 1rem;
+		margin: 10px 0 50px;
+	}
+
+	#grid .wrapper {
+		display: flex;
+		flex-wrap: nowrap
+	}
+
+	.grid-each {
+		padding: 140px 0;
+		width: 50%;
+	}
+
+	#branding-container {
+		padding-left: 0;
+		padding-right: 50px;
+	}
+
+	.plants-img {
+		height: auto;
+		left: auto;
+		right: 0;
+		width: 50vw;
+	}
+
+	.flowers-img {
+		height: auto;
+		left: auto;
+		right: 50vw;
+		width: 50vw;
+	}
+
+	#webdesign-container {
+		left: 50%;
+		padding-left: 50px;
+		padding-right: 0;
+		position: relative;
+		width: 50%;
+	}
+
+	.animations {
+		padding-right: 50px;
+	}
+
+	.marketing {
+		padding-left: 50px;
+	}
+
+	#dual-imgs {
+		display: flex;
+		height: 380px;
+	}
+
+	.dual-img-each {
+		width: 50%;
+	}
+
+	.dual-img-left {
+		display: block;
+	}
 }
