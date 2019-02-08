@@ -9,13 +9,28 @@ const express	= require('express'),
 //==========================
 //		  Configuration
 //==========================
+app.set('view engine', 'ejs');
+app.use(express.static(`${__dirname}/public`));
 
 
 //==========================
 //			   Routes
 //==========================
 app.get('/', function(req, res) {
-	res.send('Testing 123');
+	res.render('home');
+});
+
+app.get('/about', function(req, res) {
+	res.render('about');
+});
+
+app.get('/contact', function(req, res) {
+	res.render('contact');
+});
+
+
+app.get('*', function(req, res) {
+	res.render('error');
 });
 
 app.listen(port, function() {
