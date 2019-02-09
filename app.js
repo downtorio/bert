@@ -33,6 +33,6 @@ app.get('*', function(req, res) {
 	res.render('error');
 });
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
 	console.log(`checkin in on ${port}.............`);
 });
